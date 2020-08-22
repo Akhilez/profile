@@ -1,32 +1,63 @@
-import React from "react";
-import ak_logo from "./media/ak_logo.svg";
-import urls from "../urls.json";
-import { Box, Link, Flex } from "@chakra-ui/core";
+import React from "react"
+import ak_logo from "./media/ak_logo.svg"
+import urls from "../urls.json"
+import { Box, Link, Flex } from "@chakra-ui/core"
 import { Link as GLink } from "gatsby"
-import { FiMenu } from "react-icons/fi/index";
+import { FiMenu } from "react-icons/fi/index"
+import profilePhoto from "./media/profile_photo.jpg"
+import { Helmet } from "react-helmet"
 
 function NavItem({ href, text }) {
   return (
-    <GLink to={href}>
-      <Link
-        py={2}
-        px={3}
-        href={href}
-        fontSize="sm"
-        display="block"
-        _hover={{ color: "white", textDecoration: "none" }}
-      >
-        {text}
-      </Link>
-    </GLink>
-  );
+    <Link
+      as={GLink}
+      to={href}
+      py={2}
+      px={3}
+      href={href}
+      fontSize="sm"
+      display="block"
+      _hover={{ color: "white", textDecoration: "none" }}
+    >
+      {text}
+    </Link>
+  )
+}
+
+function MetaTags() {
+  let desc =
+    "Deep Learning Engineer. Master's in AI 🎓. Neural Nets 🧠, Web 🖥, Mobile 📱, Cloud ☁️, UI."
+  let title = "Akhil D. (Akhilez)"
+  const profileImage = `http://${window.location.hostname}${profilePhoto}`
+  return (
+    <Helmet>
+      <title>Akhilez</title>
+
+      <meta name="description" content={desc} />
+
+      <meta name="twitter:image:src" content={profileImage} />
+      <meta name="twitter:site" content="@akhilez_" />
+      <meta name="twitter:creator" content="@akhilez_" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={desc} />
+
+      <meta property="og:image" content={profileImage} />
+      <meta property="og:site_name" content={title} />
+      <meta property="og:type" content="object" />
+      <meta property="og:title" content={title} />
+      <meta property="og:url" content="https://akhil.ai" />
+      <meta property="og:description" content={desc} />
+    </Helmet>
+  )
 }
 
 export default function ProfileNavBar() {
-  const [show, setShow] = React.useState(false);
+  const [show, setShow] = React.useState(false)
 
   return (
     <>
+      <MetaTags />
       <Flex
         as="nav"
         alignItems="center"
@@ -34,9 +65,9 @@ export default function ProfileNavBar() {
         wrap="wrap"
         padding="4"
       >
-        <a href={urls.profile.url} className="navbar-brand logo">
+        <GLink to={urls.profile.url} className="navbar-brand logo">
           <img src={ak_logo} width={"30px"} alt={"ak_logo"} />
-        </a>
+        </GLink>
 
         <Box
           display={{ base: "block", sm: "none" }}
@@ -61,5 +92,5 @@ export default function ProfileNavBar() {
         </Box>
       </Flex>
     </>
-  );
+  )
 }

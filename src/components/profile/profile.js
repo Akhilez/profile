@@ -17,27 +17,19 @@ import atheism_img from "./media/misc/evolution.jpg"
 import vegan_img from "./media/misc/chicken.jpg"
 import kmitra_img from "./media/misc/kmitraLogo.jpg"
 import ezio_img from "./media/misc/ezio.jpg"
-import { Helmet } from "react-helmet"
 import vndly_logo from "./media/timeline/vndly_logo.png"
 import uc_logo from "./media/timeline/uc.png"
 import aviso_logo from "./media/timeline/aviso.png"
 import kmit_logo from "./media/timeline/kmit.jpg"
 import { Flex, Image } from "@chakra-ui/core/dist"
 import "../../styles/timeline.css"
-import "../../styles/profile_style.css"
-import "../../styles/fontawesome/css/font-awesome.min.css"
-import "../../styles/fontawesome/css/fonts.css"
 import "../../styles/github_calendar.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-
-import profilePhoto from "./media/profile_photo.jpg"
 
 export default class ProfilePage extends React.Component {
   render() {
     return (
       <div className={"profile_root"}>
         <Container>
-          <this.metaTags />
           <ProfileNavBar active={"profile"} />
           <ProfileBadge />
           <this.Bio />
@@ -51,33 +43,6 @@ export default class ProfilePage extends React.Component {
           <this.Footer />
         </Container>
       </div>
-    )
-  }
-
-  metaTags() {
-    let desc =
-      "Deep Learning Engineer. Master's in AI 🎓. Neural Nets 🧠, Web 🖥, Mobile 📱, Cloud ☁️, UI."
-    let title = "Akhil D. (Akhilez)"
-    return (
-      <Helmet>
-        <title>Akhilez</title>
-
-        <meta name="description" content={desc} />
-
-        <meta name="twitter:image:src" content={profilePhoto} />
-        <meta name="twitter:site" content="@akhilez_" />
-        <meta name="twitter:creator" content="@akhilez_" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={desc} />
-
-        <meta property="og:image" content={profilePhoto} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:type" content="object" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="https://akhil.ai" />
-        <meta property="og:description" content={desc} />
-      </Helmet>
     )
   }
 
