@@ -28,21 +28,20 @@ function MetaTags() {
   let desc =
     "Deep Learning Engineer. Master's in AI 🎓. Neural Nets 🧠, Web 🖥, Mobile 📱, Cloud ☁️, UI."
   let title = "Akhil D. (Akhilez)"
-  const profileImage = `http://${window.location.hostname}${profilePhoto}`
   return (
     <Helmet>
       <title>Akhilez</title>
 
       <meta name="description" content={desc} />
 
-      <meta name="twitter:image:src" content={profileImage} />
+      <meta name="twitter:image:src" content={profilePhoto} />
       <meta name="twitter:site" content="@akhilez_" />
       <meta name="twitter:creator" content="@akhilez_" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={desc} />
 
-      <meta property="og:image" content={profileImage} />
+      <meta property="og:image" content={profilePhoto} />
       <meta property="og:site_name" content={title} />
       <meta property="og:type" content="object" />
       <meta property="og:title" content={title} />
