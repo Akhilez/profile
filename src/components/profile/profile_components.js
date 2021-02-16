@@ -1,10 +1,11 @@
 import React from "react"
-import { Row, Col } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import urls from "../urls.json"
-import GithubCalendar from "github-calendar"
 import { Box } from "@chakra-ui/core/dist"
 import { Link } from "gatsby"
 import profilePhoto from "./media/profile_photo.jpg"
+import GitHubCalendar from "react-github-calendar"
+import ReactTooltip from "react-tooltip"
 
 export function ProfileBadge() {
   return (
@@ -81,19 +82,15 @@ export function Social() {
   )
 }
 
-export class MyGithubCalendar extends React.Component {
-  render() {
-    return (
-      <div
-        className="calendar"
-        style={{ marginTop: 20, marginBottom: 50, width: "100%" }}
-      >
-        Loading the data just for you.
-      </div>
-    )
+export const MyGithubCalendar = () => {
+  const theme = {
+    background: "transparent",
+    text: "#fff"
   }
 
-  componentDidMount() {
-    GithubCalendar(".calendar", "Akhilez", { responsive: true })
-  }
+  return (
+    <GitHubCalendar username="Akhilez" theme={theme} blockSize={14} blockMargin={4}>
+      <ReactTooltip delayShow={50} html />
+    </GitHubCalendar>
+  )
 }
