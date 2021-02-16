@@ -21,7 +21,6 @@ import vndly_logo from "./media/timeline/vndly_logo.png"
 import uc_logo from "./media/timeline/uc.png"
 import aviso_logo from "./media/timeline/aviso.png"
 import kmit_logo from "./media/timeline/kmit.jpg"
-import { Flex, Image } from "@chakra-ui/core/dist"
 import "../../styles/timeline.css"
 import "../../styles/github_calendar.css"
 
@@ -59,11 +58,6 @@ export default class ProfilePage extends React.Component {
           <Emoji>🧠</Emoji>, <i>Productivity</i> <Emoji>👨🏻‍💻</Emoji> and
           <i>Space Exploration</i> <Emoji>🪐</Emoji>
         </p>
-
-        <Flex className="header1" pt={4}>
-          <Image mr={4} src={toggle_img} alt="toggle" width="50px" />
-          Available for hire.
-        </Flex>
       </div>
     )
   }
@@ -125,17 +119,9 @@ export default class ProfilePage extends React.Component {
               linkBrand="https://vndly.com/"
               description={
                 <p>
-                  Boosted the accuracy of production-grade Deep-Learning model
-                  based on
-                  <b>
-                    <i> Google's BERT </i>
-                  </b>
-                  for an NLP task of matching candidates to job descriptions.
+                  NLP Tasks - Semantic Text Similarity based on BERT, Key segments highlighter
                   Technologies:
                   <i>PyTorch, TensorFlow, Django, React</i>
-                  <br />
-                  Designed an automated training pipeline for
-                  <strong> active learning</strong>
                 </p>
               }
             />

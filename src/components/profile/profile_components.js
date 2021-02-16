@@ -20,7 +20,7 @@ export function ProfileBadge() {
         <Col sm={"auto"}>
           <div style={{ marginTop: 20 }}>
             <h1 className={"light_font"} style={{ fontSize: 58 }}>
-              Akhil D. <i style={{ fontSize: 35 }}>(Akhilez)</i>
+              Akhil Devarashetti
             </h1>
 
             <div style={{ fontSize: 28, marginTop: -10 }}>
