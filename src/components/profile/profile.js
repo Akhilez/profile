@@ -1,8 +1,7 @@
 import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import ProfileNavBar from "./navbar"
+import { Row, Col } from "react-bootstrap"
 import DeepLearning from "./sections/DeepLearning"
-import { MyGithubCalendar, Social, ResumeButton } from "./profile_components"
+import { MyGithubCalendar } from "./profile_components"
 import Projects from "./sections/Projects"
 import code_art_img from "./media/cover_code_art_with_bg_dark.png"
 import neuralhack from "./media/neuralhack.jpg"
@@ -18,16 +17,16 @@ import kmit_logo from "./media/timeline/kmit.jpg"
 import "../../styles/timeline.css"
 import "../../styles/github_calendar.css"
 import { ProfileBadge } from "./sections/ProfileBadge"
-import { Box } from "@chakra-ui/react"
+import { Box, Container } from "@chakra-ui/react"
+import { Bio } from "./sections/Bio"
 
 export default class ProfilePage extends React.Component {
   render() {
     return (
-      <Box className={"profile_root"} backgroundColor="gray.800">
+      <Box>
         <Container>
-          <ProfileNavBar active={"profile"} />
           <ProfileBadge />
-          <this.Bio />
+          <Bio />
           <this.TimeLine />
           <DeepLearning />
           <this.CodingActivity />
@@ -35,26 +34,8 @@ export default class ProfilePage extends React.Component {
           <Projects />
           <this.Misc />
           <this.Influencers />
-          <this.Footer />
         </Container>
       </Box>
-    )
-  }
-
-  Bio() {
-    const Emoji = props => <span className="emoji_text">{props.children}</span>
-
-    return (
-      <div>
-        <p className="para no_href_p">
-          I am obsessed with
-          <b>
-            <i> Deep Learning </i>
-          </b>
-          <Emoji>🧠</Emoji>, <i>Productivity</i> <Emoji>👨🏻‍💻</Emoji> and
-          <i>Space Exploration</i> <Emoji>🪐</Emoji>
-        </p>
-      </div>
     )
   }
 
@@ -525,26 +506,6 @@ export default class ProfilePage extends React.Component {
           </div>
         </div>
       </div>
-    )
-  }
-
-  Footer() {
-    return (
-      <footer>
-        <div className="footer">
-          <hr />
-
-          <div style={{ marginTop: 15 }} className="roboto-light-ak no_href">
-            <a href="mailto: akhilez.ai@gmail.com"> akhilez.ai@gmail.com</a>
-          </div>
-          <Social />
-
-          <ResumeButton />
-          <br />
-
-          <p className="roboto-light-ak">Akhil Devarashetti</p>
-        </div>
-      </footer>
     )
   }
 }

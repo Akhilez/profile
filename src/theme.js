@@ -2,17 +2,25 @@ import { extendTheme } from "@chakra-ui/react"
 import { createBreakpoints } from "@chakra-ui/theme-tools"
 
 export const theme = extendTheme({
+  components: {
+    Container: {
+      baseStyle: {
+        maxW: { lg: "1024px", md: "768px", sm: "640px", xl: "1280px" },
+      },
+    },
+    Text: {
+      baseStyle: {
+        color: "gray.300",
+      },
+    },
+  },
   fonts: {
     body: "Roboto Condensed, system-ui, sans-serif",
     heading: "Roboto Condensed, system-ui, sans-serif",
   },
-  colors: {
-    brand: {
-      900: "#1a365d",
-      800: "#153e75",
-      700: "#2a69ac",
-    },
-    backgroundColor: "gray.100",
+  config: {
+    initialColorMode: "dark",
+    useSystemColorMode: false,
   },
   breakpoints: createBreakpoints({
     base: "150px",

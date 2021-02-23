@@ -1,60 +1,48 @@
 import React from "react"
-import { Col, Row } from "react-bootstrap"
-import urls from "../urls.json"
 import { Box } from "@chakra-ui/react"
-import { Link } from "gatsby"
-import profilePhoto from "./media/profile_photo.jpg"
 import GitHubCalendar from "react-github-calendar"
 import ReactTooltip from "react-tooltip"
+import ReactMarkdown from "react-markdown"
+import gfm from "remark-gfm"
+import ChakraUIRenderer from "chakra-ui-markdown-renderer"
+import { ChakraProvider } from "@chakra-ui/react"
+import { theme } from "../../theme"
+import { ProfileNavBar } from "./navbar"
 
-export function ResumeButton() {
-  return (
-    <div>
-      <Link
-        to={urls.resume.url}
-        className="btn btn-outline-secondary resume-button"
-      >
-        RESUME
-      </Link>
-    </div>
-  )
-}
+export const GlobalWrapper = ({ children }) => (
+  <ChakraProvider
+    theme={theme}
+    initialColorMode={theme.config.initialColorMode}
+  >
+    <ProfileNavBar />
+    {children}
+  </ChakraProvider>
+)
 
-export function Social() {
-  return (
-    <div className="social">
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/akhilez/"
-          >
-            <i className="fa fa-linkedin" />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/Akhilez"
-          >
-            <i className="fa fa-github" />
-          </a>
-        </li>
-      </ul>
-    </div>
-  )
-}
+export const MD = ({ source, ...props }) => (
+  <Box
+    as={ReactMarkdown}
+    plugins={[gfm]}
+    renderers={ChakraUIRenderer()}
+    escapeHtml={false}
+    source={source}
+    {...props}
+  />
+)
 
 export const MyGithubCalendar = () => {
   const theme = {
     background: "transparent",
-    text: "#fff"
+    text: "#fff",
   }
 
   return (
-    <GitHubCalendar username="Akhilez" theme={theme} blockSize={14} blockMargin={4}>
+    <GitHubCalendar
+      username="Akhilez"
+      theme={theme}
+      blockSize={14}
+      blockMargin={4}
+    >
       <ReactTooltip delayShow={50} html />
     </GitHubCalendar>
   )
