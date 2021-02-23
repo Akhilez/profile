@@ -1,9 +1,8 @@
-import projects from "../data/projects.json"
-import urls from "../../urls.json"
 import React from "react"
 import { Box } from "@chakra-ui/react"
 import { BsCode } from "react-icons/all"
 import { FaAndroid } from "react-icons/all"
+import { projects, urls } from "../data/data"
 
 export function ProjectBox(props) {
   let project = props.data

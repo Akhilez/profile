@@ -13,6 +13,15 @@ export const theme = extendTheme({
         color: "gray.300",
       },
     },
+    Heading: {
+      variants: {
+        section: {
+          fontSize: "2xl",
+          mt: 8,
+          mb: 4,
+        },
+      },
+    },
   },
   fonts: {
     body: "Roboto Condensed, system-ui, sans-serif",
@@ -21,6 +30,11 @@ export const theme = extendTheme({
   config: {
     initialColorMode: "dark",
     useSystemColorMode: false,
+  },
+  colors: {
+    gray: {
+      "750": "#232b38",
+    },
   },
   breakpoints: createBreakpoints({
     base: "150px",

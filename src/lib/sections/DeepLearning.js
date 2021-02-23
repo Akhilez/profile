@@ -1,5 +1,3 @@
-import urls from "../../urls.json"
-import { Col, Row } from "react-bootstrap"
 import React from "react"
 import mlg_img from "../media/ml_logo.png"
 

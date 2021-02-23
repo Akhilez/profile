@@ -1,6 +1,6 @@
 import vndly_logo from "../media/timeline/vndly_logo.png"
 import uc_logo from "../media/timeline/uc.png"
-import aviso_logo from "../media/timeline/aviso.png"
+import aviso_logo from "../media/timeline/aviso_old.png"
 import kmit_logo from "../media/timeline/kmit.jpg"
 
 export const bio = `
@@ -53,3 +53,9 @@ Technologies used: _Django, Kubernetes, AWS, Linux, Puppet, Vue.js_`,
     description: `My first adventures with programming`,
   },
 }
+
+export const codingActivity = `
+
+I absolutely ❤ coding! Each green box below represents the amount of coding on that day of the year.
+
+`

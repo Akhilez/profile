@@ -1,7 +1,7 @@
 import React from "react"
 import { Flex, Text, Box, Heading, Image } from "@chakra-ui/react"
 import { timeline } from "../data/texts"
-import { MD } from "../profile_components"
+import { MD } from "../common"
 
 const TimelineBox = ({
   timeline: { description, role, year, org, img },
@@ -13,7 +13,7 @@ const TimelineBox = ({
     </Text>
     <Flex
       borderLeftColor="gray.100"
-      backgroundColor="#232b38"
+      backgroundColor="gray.750"
       borderLeftWidth={2}
       w="100%"
       {...props}
@@ -42,9 +42,7 @@ const TimelineBox = ({
 
 export const Timeline = () => (
   <Box my={8} w="full">
-    <Heading size="md" mb={4}>
-      Timeline
-    </Heading>
+    <Heading variant="section">Timeline</Heading>
     <TimelineBox timeline={timeline.vndly} pt={4} borderTopRightRadius="lg" />
     <TimelineBox timeline={timeline.uc} />
     <TimelineBox timeline={timeline.aviso} />

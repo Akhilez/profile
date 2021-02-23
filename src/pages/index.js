@@ -1,6 +1,6 @@
 import React from "react"
-import ProfilePage from "../components/profile/profile"
-import { GlobalWrapper } from "../components/profile/profile_components"
+import { GlobalWrapper } from "../lib/common"
+import ProfilePage from "../lib/profile"
 
 export default function MyApp() {
   return (

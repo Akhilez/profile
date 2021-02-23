@@ -1,7 +1,5 @@
 import React from "react"
-import { Container } from "react-bootstrap"
-import ProfileNavBar from "./profile/navbar"
-import { Flex, Stack, Box } from "@chakra-ui/react"
+import { Flex, Stack, Box, Container } from "@chakra-ui/react"
 import { MdFileDownload } from "react-icons/md"
 
 export default class Resume extends React.Component {
@@ -15,7 +13,6 @@ export default class Resume extends React.Component {
     return (
       <div className={"profile_root no_href"}>
         <Container>
-          <ProfileNavBar active={"resume"} />
           <Stack alignItems="center">
             <Flex pb={4}>
               <h1>Resume</h1>

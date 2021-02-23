@@ -1,20 +1,17 @@
 import React from "react"
-import DeepLearning from "./sections/DeepLearning"
-import { MyGithubCalendar } from "./profile_components"
 import Projects from "./sections/Projects"
-import code_art_img from "./media/cover_code_art_with_bg_dark.png"
 import neuralhack from "./media/neuralhack.jpg"
 import revolutionUC from "./media/revolutionuc.jpg"
 import atheism_img from "./media/misc/evolution.jpg"
 import vegan_img from "./media/misc/chicken.jpg"
 import kmitra_img from "./media/misc/kmitraLogo.jpg"
 import ezio_img from "./media/misc/ezio.jpg"
-import "../../styles/timeline.css"
-import "../../styles/github_calendar.css"
+import "../styles/github_calendar.css"
 import { ProfileBadge } from "./sections/ProfileBadge"
 import { Container } from "@chakra-ui/react"
 import { Bio } from "./sections/Bio"
 import { Timeline } from "./sections/Timeline"
+import { CodingActivity } from "./sections/CodingActivity"
 
 export default class ProfilePage extends React.Component {
   render() {
@@ -23,35 +20,12 @@ export default class ProfilePage extends React.Component {
         <ProfileBadge />
         <Bio />
         <Timeline />
-        <this.CodingActivity />
+        <CodingActivity />
         <this.Achievements />
         <Projects />
         <this.Misc />
         <this.Influencers />
       </Container>
-    )
-  }
-
-  CodingActivity() {
-    return (
-      <div>
-        <h3 className="header1 no_href_p">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/Akhilez"
-            style={{ fontWeight: 700 }}
-          >
-            Coding Activity
-          </a>
-        </h3>
-        <br />
-        I absolutely ❤ coding! Each green box below represents the amount of
-        coding on that day of the year.
-        <br />
-        <br />
-        <MyGithubCalendar />
-      </div>
     )
   }
 

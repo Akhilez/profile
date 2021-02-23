@@ -1,6 +1,5 @@
 import React from "react"
 import ak_logo from "./media/ak_logo.svg"
-import urls from "../urls.json"
 import {
   Box,
   Link,
@@ -11,26 +10,9 @@ import {
   HStack,
 } from "@chakra-ui/react"
 import { Link as GLink } from "gatsby"
-import { FiMenu } from "react-icons/all"
 import profilePhoto from "./media/profile_photo.jpg"
 import { Helmet } from "react-helmet"
-
-function NavItem({ href, text }) {
-  return (
-    <Link
-      as={GLink}
-      to={href}
-      py={2}
-      px={3}
-      href={href}
-      fontSize="sm"
-      display="block"
-      _hover={{ color: "white", textDecoration: "none" }}
-    >
-      {text}
-    </Link>
-  )
-}
+import { urls } from "./data/data"
 
 function MetaTags() {
   let desc =
@@ -56,49 +38,6 @@ function MetaTags() {
       <meta property="og:url" content="https://akhil.ai" />
       <meta property="og:description" content={desc} />
     </Helmet>
-  )
-}
-
-export default function ProfileNavBar2() {
-  const [show, setShow] = React.useState(false)
-
-  return (
-    <>
-      <MetaTags />
-      <Flex
-        as="nav"
-        alignItems="center"
-        justify="space-between"
-        wrap="wrap"
-        padding="4"
-      >
-        <GLink to={urls.profile.url} className="navbar-brand logo">
-          <img src={ak_logo} width={"30px"} alt={"ak_logo"} />
-        </GLink>
-
-        <Box
-          display={{ base: "block", sm: "none" }}
-          onClick={() => setShow(!show)}
-        >
-          <FiMenu />
-        </Box>
-
-        <Box
-          display={{ base: show ? "block" : "none", sm: "flex" }}
-          width={{ base: "full", sm: "auto" }}
-        />
-
-        <Box
-          display={{ base: show ? "block" : "none", sm: "flex" }}
-          mt={{ base: 4, sm: 0 }}
-        >
-          <NavItem href={urls.profile.url} text="PROFILE" />
-          <NavItem href={urls.ml_gallery.url} text="ML GALLERY" />
-          <NavItem href={urls.all_projects.url} text="PROJECTS" />
-          <NavItem href={urls.resume.url} text="RESUME" />
-        </Box>
-      </Flex>
-    </>
   )
 }
 

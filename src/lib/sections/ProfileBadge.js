@@ -6,20 +6,17 @@ import {
   Heading,
   IconButton,
   HStack,
-  Flex,
   Link as CLink,
   Image,
   WrapItem,
   Button,
 } from "@chakra-ui/react"
-import { Col, Row } from "react-bootstrap"
 import profilePhoto from "../media/profile_photo.jpg"
 import mediumLogo from "../media/medium_logo.png"
 import React from "react"
-import { ResumeButton, Social } from "../profile_components"
 import { FaLinkedinIn, FaGithub } from "react-icons/all"
-import urls from "../../urls.json"
 import { Link } from "gatsby"
+import { urls } from "../data/data"
 
 const SocialIcon = ({ color, icon, url }) => (
   <CLink href={url} isExternal>
@@ -92,7 +89,7 @@ export const ProfileBadge = () => (
             textDecoration: "none",
           }}
         >
-          RESUME
+          Resume
         </Button>
       </WrapItem>
     </Wrap>
