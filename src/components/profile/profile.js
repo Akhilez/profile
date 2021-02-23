@@ -1,5 +1,4 @@
 import React from "react"
-import { Row, Col } from "react-bootstrap"
 import DeepLearning from "./sections/DeepLearning"
 import { MyGithubCalendar } from "./profile_components"
 import Projects from "./sections/Projects"
@@ -10,163 +9,26 @@ import atheism_img from "./media/misc/evolution.jpg"
 import vegan_img from "./media/misc/chicken.jpg"
 import kmitra_img from "./media/misc/kmitraLogo.jpg"
 import ezio_img from "./media/misc/ezio.jpg"
-import vndly_logo from "./media/timeline/vndly_logo.png"
-import uc_logo from "./media/timeline/uc.png"
-import aviso_logo from "./media/timeline/aviso.png"
-import kmit_logo from "./media/timeline/kmit.jpg"
 import "../../styles/timeline.css"
 import "../../styles/github_calendar.css"
 import { ProfileBadge } from "./sections/ProfileBadge"
-import { Box, Container } from "@chakra-ui/react"
+import { Container } from "@chakra-ui/react"
 import { Bio } from "./sections/Bio"
+import { Timeline } from "./sections/Timeline"
 
 export default class ProfilePage extends React.Component {
   render() {
     return (
-      <Box>
-        <Container>
-          <ProfileBadge />
-          <Bio />
-          <this.TimeLine />
-          <DeepLearning />
-          <this.CodingActivity />
-          <this.Achievements />
-          <Projects />
-          <this.Misc />
-          <this.Influencers />
-        </Container>
-      </Box>
-    )
-  }
-
-  TimeLine() {
-    const TimeLineItem = ({
-      date,
-      image,
-      brand,
-      role,
-      description,
-      linkRole,
-      linkBrand,
-    }) => {
-      return (
-        <li className="event" data-date={date}>
-          <Row>
-            <Col sm="auto">
-              <img
-                width="50px"
-                src={image}
-                alt={brand}
-                style={{ marginTop: 25, borderRadius: 4 }}
-              />
-            </Col>
-            <Col>
-              <h3 className={"timeline_heading"}>
-                {linkRole ? <a href={linkRole}>{role}</a> : role}
-              </h3>
-              <p>
-                {linkBrand ? (
-                  <a
-                    href={linkBrand}
-                    style={{ color: "#919c9e", fontWeight: 400 }}
-                  >
-                    {brand}
-                  </a>
-                ) : (
-                  brand
-                )}
-              </p>
-              {description}
-            </Col>
-          </Row>
-        </li>
-      )
-    }
-    return (
-      <div>
-        <h3 className="header1">Timeline</h3>
-
-        <div id="timeline_section">
-          <ul className="timeline no_href">
-            <TimeLineItem
-              date="2020"
-              image={vndly_logo}
-              brand="VNDLY"
-              role="Deep Learning Engineer"
-              linkBrand="https://vndly.com/"
-              description={
-                <p>
-                  NLP Tasks - Semantic Text Similarity based on BERT, Key
-                  segments highlighter Technologies:
-                  <i>PyTorch, TensorFlow, Django, React</i>
-                </p>
-              }
-            />
-            <TimeLineItem
-              date="2019"
-              image={uc_logo}
-              brand="University of Cincinnati"
-              role="Master’s in Artificial Intelligence"
-              linkBrand="https://www.uc.edu/"
-              linkRole="https://webapps2.uc.edu/ecurriculum/degreeprograms/program/detail/20MAS-AI-MENG"
-              description={
-                <p>
-                  Specializations:{" "}
-                  <i>
-                    Computer Vision, NLP, Reinforcement Learning and Complex
-                    Intelligent Systems.
-                  </i>
-                </p>
-              }
-            />
-            <TimeLineItem
-              date="2018"
-              image={aviso_logo}
-              brand="Aviso AI"
-              role="Full-Stack Engineer"
-              linkBrand="https://www.aviso.com/"
-              description={
-                <p>
-                  Reduced the ML cloud cost by
-                  <b>
-                    <i> 60%</i>
-                  </b>
-                  <br />
-                  Technologies used:
-                  <i> Django, Kubernetes, AWS, Linux, Puppet, Vue.js</i>
-                </p>
-              }
-            />
-            <TimeLineItem
-              date="2015"
-              image={kmit_logo}
-              brand="Keshav Memorial Institute of Technology"
-              role="Part-Time Developer"
-              linkBrand="https://kmit.in/home"
-              description={
-                <p>
-                  Developed apps for the college’s operations like{" "}
-                  <a href="http://akhilez.com/home/all_projects//#student_feedback">
-                    Student Feedback{" "}
-                  </a>
-                  and{" "}
-                  <a href="http://akhilez.com/home/all_projects//#gatepass">
-                    Gate-Pass System
-                  </a>
-                </p>
-              }
-            />
-
-            <TimeLineItem
-              date="2014"
-              image={kmit_logo}
-              brand="Keshav Memorial Institute of Technology"
-              role="Bachelor's in Computer Science and Engineering"
-              linkBrand="https://kmit.in/home"
-            />
-          </ul>
-        </div>
-      </div>
+      <Container>
+        <ProfileBadge />
+        <Bio />
+        <Timeline />
+        <this.CodingActivity />
+        <this.Achievements />
+        <Projects />
+        <this.Misc />
+        <this.Influencers />
+      </Container>
     )
   }
 
@@ -189,9 +51,6 @@ export default class ProfilePage extends React.Component {
         <br />
         <br />
         <MyGithubCalendar />
-        <div className="row">
-          <img src={code_art_img} alt="CoverPhoto" width="400" />
-        </div>
       </div>
     )
   }

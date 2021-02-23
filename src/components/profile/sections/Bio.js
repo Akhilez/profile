@@ -5,7 +5,7 @@ import { MD } from "../profile_components"
 
 export const Bio = () => (
   <Box>
-    <Heading size="lg" my={4}>
+    <Heading size="md" my={4}>
       Bio
     </Heading>
     <MD source={bio} />

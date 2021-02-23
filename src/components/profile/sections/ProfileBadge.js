@@ -48,7 +48,8 @@ export const ProfileBadge = () => (
           <CLink
             href="mailto: akhilez.ai@gmail.com"
             mt={1}
-            _hover={{ textDecoration: "underline", color: "gray.400" }}
+            _hover={{ textDecoration: "none", color: "gray.300" }}
+            color="gray.400"
           >
             akhilez.ai@gmail.com
           </CLink>
