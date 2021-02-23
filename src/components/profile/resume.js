@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import ProfileNavBar from "./navbar";
-import { Flex, Stack, Box } from "@chakra-ui/core/dist";
+import { Flex, Stack, Box } from "@chakra-ui/react";
 import { MdFileDownload } from "react-icons/md";
 
 export default class ResumePage extends React.Component {

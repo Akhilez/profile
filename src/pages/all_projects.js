@@ -7,24 +7,21 @@ import "../styles/profile_style.css"
 import "../styles/fontawesome/css/font-awesome.min.css"
 import "../styles/fontawesome/css/fonts.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import theme from "../theme"
-import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core"
+import { theme } from "../theme"
+import { ChakraProvider } from "@chakra-ui/react"
 
 export default class AllProjectsPage extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <ColorModeProvider>
-          <CSSReset />
-          <div className={"profile_root"}>
-            <Container>
-              <ProfileNavBar active={"all_projects"} />
-              <h1 style={{ marginTop: 70 }}>Projects</h1>
-              <this.Projects />
-            </Container>
-          </div>
-        </ColorModeProvider>
-      </ThemeProvider>
+      <ChakraProvider theme={theme}>
+        <div className={"profile_root"}>
+          <Container>
+            <ProfileNavBar active={"all_projects"} />
+            <h1 style={{ marginTop: 70 }}>Projects</h1>
+            <this.Projects />
+          </Container>
+        </div>
+      </ChakraProvider>
     )
   }
 

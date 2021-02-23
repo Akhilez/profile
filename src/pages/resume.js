@@ -4,16 +4,13 @@ import "../styles/profile_style.css"
 import "../styles/fontawesome/css/font-awesome.min.css"
 import "../styles/fontawesome/css/fonts.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import theme from "../theme"
-import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core"
+import {theme} from "../theme"
+import { ChakraProvider } from "@chakra-ui/react"
 
-export default function () {
+export default function() {
   return (
-    <ThemeProvider theme={theme}>
-      <ColorModeProvider>
-        <CSSReset />
-        <Resume />
-      </ColorModeProvider>
-    </ThemeProvider>
+    <ChakraProvider theme={theme}>
+      <Resume />
+    </ChakraProvider>
   )
 }

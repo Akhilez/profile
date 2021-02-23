@@ -2,14 +2,8 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import ProfileNavBar from "./navbar"
 import DeepLearning from "./sections/DeepLearning"
-import {
-  ProfileBadge,
-  MyGithubCalendar,
-  Social,
-  ResumeButton,
-} from "./profile_components"
+import { MyGithubCalendar, Social, ResumeButton } from "./profile_components"
 import Projects from "./sections/Projects"
-import toggle_img from "./media/toggle.png"
 import code_art_img from "./media/cover_code_art_with_bg_dark.png"
 import neuralhack from "./media/neuralhack.jpg"
 import revolutionUC from "./media/revolutionuc.jpg"
@@ -23,11 +17,13 @@ import aviso_logo from "./media/timeline/aviso.png"
 import kmit_logo from "./media/timeline/kmit.jpg"
 import "../../styles/timeline.css"
 import "../../styles/github_calendar.css"
+import { ProfileBadge } from "./sections/ProfileBadge"
+import { Box } from "@chakra-ui/react"
 
 export default class ProfilePage extends React.Component {
   render() {
     return (
-      <div className={"profile_root"}>
+      <Box className={"profile_root"} backgroundColor="gray.800">
         <Container>
           <ProfileNavBar active={"profile"} />
           <ProfileBadge />
@@ -41,7 +37,7 @@ export default class ProfilePage extends React.Component {
           <this.Influencers />
           <this.Footer />
         </Container>
-      </div>
+      </Box>
     )
   }
 
@@ -119,8 +115,8 @@ export default class ProfilePage extends React.Component {
               linkBrand="https://vndly.com/"
               description={
                 <p>
-                  NLP Tasks - Semantic Text Similarity based on BERT, Key segments highlighter
-                  Technologies:
+                  NLP Tasks - Semantic Text Similarity based on BERT, Key
+                  segments highlighter Technologies:
                   <i>PyTorch, TensorFlow, Django, React</i>
                 </p>
               }
@@ -209,8 +205,8 @@ export default class ProfilePage extends React.Component {
         <br />
         I absolutely ❤ coding! Each green box below represents the amount of
         coding on that day of the year.
-        <br/>
-        <br/>
+        <br />
+        <br />
         <MyGithubCalendar />
         <div className="row">
           <img src={code_art_img} alt="CoverPhoto" width="400" />

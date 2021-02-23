@@ -1,9 +1,9 @@
 import React from "react"
 import ak_logo from "./media/ak_logo.svg"
 import urls from "../urls.json"
-import { Box, Link, Flex } from "@chakra-ui/core"
+import { Box, Link, Flex } from "@chakra-ui/react"
 import { Link as GLink } from "gatsby"
-import { FiMenu } from "react-icons/fi/index"
+import { FiMenu } from "react-icons/all"
 import profilePhoto from "./media/profile_photo.jpg"
 import { Helmet } from "react-helmet"
 
