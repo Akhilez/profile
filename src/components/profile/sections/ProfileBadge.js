@@ -84,6 +84,7 @@ export const ProfileBadge = () => (
           borderColor="gray.600"
           color="gray.500"
           fontWeight="normal"
+          size="sm"
           _hover={{
             backgroundColor: "gray.700",
             color: "gray.400",
