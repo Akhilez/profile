@@ -26,14 +26,16 @@ const TimelineBox = ({
         mt="15px"
         borderRadius="5px"
       />
-      <Box w="100px" p={2} ml={2} align="center">
-        <Image src={img} maxW="50px" maxH="50px" mt={4} borderRadius="md" />
-      </Box>
-      <Box m={2} w="100%">
-        <Text fontSize="xl">{role}</Text>
-        <Text color="gray.400">{org}</Text>
-        <MD source={description} />
-      </Box>
+      <Flex direction={{ base: "column", sm: "row" }}>
+        <Box w="100px" p={2} ml={2} align="center">
+          <Image src={img} maxW="50px" maxH="50px" mt={4} borderRadius="md" />
+        </Box>
+        <Box m={2} w="100%">
+          <Text fontSize="xl">{role}</Text>
+          <Text color="gray.400">{org}</Text>
+          <MD source={description} />
+        </Box>
+      </Flex>
     </Flex>
   </Flex>
 )
