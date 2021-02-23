@@ -12,6 +12,7 @@ import { Container } from "@chakra-ui/react"
 import { Bio } from "./sections/Bio"
 import { Timeline } from "./sections/Timeline"
 import { CodingActivity } from "./sections/CodingActivity"
+import { Research } from "./sections/Research"
 
 export default class ProfilePage extends React.Component {
   render() {
@@ -21,6 +22,7 @@ export default class ProfilePage extends React.Component {
         <Bio />
         <Timeline />
         <CodingActivity />
+        <Research />
         <this.Achievements />
         <Projects />
         <this.Misc />
