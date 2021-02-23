@@ -28,17 +28,17 @@ export const Research = () => (
 
 const Paper = ({ paper }) => (
   <Flex
-    h="280px"
+    h="240px"
     boxShadow="base"
     borderRadius="8px"
     direction="row"
     backgroundColor="gray.750"
   >
     <Box w={{ base: "xs", md: "sm" }} p={4}>
-      <Heading fontSize="2xl" mb={4}>
+      <Heading fontSize="xl" mb={4} fontWeight="normal">
         {paper.title}
       </Heading>
-      <Text noOfLines={5}>
+      <Text noOfLines={4}>
         <strong>Abstract: </strong>
         {paper.abstract}
       </Text>
@@ -48,6 +48,7 @@ const Paper = ({ paper }) => (
           mt={4}
           rightIcon={<HiExternalLink />}
           as={Link}
+          _hover={{ textDecoration: "none" }}
           href={paper.links.paper}
           isExternal
         >
@@ -61,6 +62,7 @@ const Paper = ({ paper }) => (
             rightIcon={<HiExternalLink />}
             fontWeight="normal"
             as={Link}
+            _hover={{ textDecoration: "none" }}
             href={paper.links.app}
             isExternal
           >

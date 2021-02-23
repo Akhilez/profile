@@ -1,8 +1,14 @@
 import React from "react"
-import { Box } from "@chakra-ui/react"
 import { BsCode } from "react-icons/all"
 import { FaAndroid } from "react-icons/all"
 import { projects, urls } from "../data/data"
+import { Box, Heading } from "@chakra-ui/react"
+
+export const Projects = () => (
+  <Box>
+    <Heading variant="section">Projects</Heading>
+  </Box>
+)
 
 export function ProjectBox(props) {
   let project = props.data
@@ -88,7 +94,7 @@ export function ProjectBox(props) {
   )
 }
 
-export default function Projects() {
+export default function ProjectsOld() {
   let profile_projects = projects.projects.filter(project => project.on_profile)
   return (
     <div>
