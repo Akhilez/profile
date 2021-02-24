@@ -1,3 +1,7 @@
+import { neuralHack, revolutionUc } from "./texts"
+import neuralhackImage from "../media/neuralhack.jpg"
+import revolutionUCImage from "../media/revolutionuc.jpg"
+
 export const urls = {
   profile: {
     url: "/",
@@ -166,3 +170,20 @@ export const papers = {
 }
 
 export const papersList = [papers.dis_cease, papers.rl_survey]
+
+export const hackathonsList = [
+  {
+    title: "RevolutionUC",
+    date: "22nd February, 2020",
+    result: "Top 5",
+    img: revolutionUCImage,
+    desc: revolutionUc,
+  },
+  {
+    title: "NeuralHack",
+    date: "16th November, 2017",
+    result: "Won 3rd",
+    img: neuralhackImage,
+    desc: neuralHack,
+  },
+]

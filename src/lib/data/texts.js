@@ -59,3 +59,10 @@ export const codingActivity = `
 I absolutely ❤ coding! Each green box below represents the amount of coding on that day of the year.
 
 `
+
+export const revolutionUc = `
+RevolutionUC is a hackathon conducted by ACM at University of Cincinnati with roughly 400 participants.\n
+Won for Alster AR
+`
+
+export const neuralHack = `NeuralHack is an India-wide hackathon with approximately 13,000 participants conducted by Virtusa`
