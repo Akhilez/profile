@@ -16,7 +16,7 @@ import { Misc } from "./sections/Misc"
 export default class ProfilePage extends React.Component {
   render() {
     return (
-      <Container>
+      <Container mb={6}>
         <ProfileBadge />
         <Bio />
         <Timeline />
