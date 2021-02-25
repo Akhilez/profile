@@ -56,7 +56,7 @@ Technologies used: _Django, Kubernetes, AWS, Linux, Puppet, Vue.js_`,
 
 export const codingActivity = `
 
-I absolutely ❤ coding! Each green box below represents the amount of coding on that day of the year.
+I absolutely ❤ coding! Each box below represents the amount of coding on that day of the year. Darker box = lot of code
 
 `
 
@@ -66,3 +66,10 @@ Won for Alster AR
 `
 
 export const neuralHack = `NeuralHack is an India-wide hackathon with approximately 13,000 participants conducted by Virtusa`
+
+export const mlGalleryDescription = `
+
+A gallery of Deep Learning projects.\n
+Every project here is runnable, visualized and explained clearly.
+
+`

@@ -1,12 +1,63 @@
 import React from "react"
-import { BsCode } from "react-icons/all"
-import { FaAndroid } from "react-icons/all"
-import { projects, urls } from "../data/data"
-import { Box, Heading } from "@chakra-ui/react"
+import { BsCode, FaAndroid } from "react-icons/all"
+import { deepLearningProjects, projects, urls } from "../data/data"
+import mlgImg from "../media/projects/mlgImg.png"
+import {
+  Box,
+  Heading,
+  Image,
+  ListItem,
+  UnorderedList,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react"
+import { mlGalleryDescription } from "../data/texts"
 
 export const Projects = () => (
   <Box>
     <Heading variant="section">Projects</Heading>
+
+    <DeepLearning />
+  </Box>
+)
+
+const DeepLearning = () => (
+  <Category title="Deep Learning">
+    <WrapItem>
+      <Project title="ML Gallery" img={mlgImg}>
+        {mlGalleryDescription}
+      </Project>
+    </WrapItem>
+    {deepLearningProjects.map(project => (
+      <WrapItem key={project.title}>
+        <Project title={project.title} img={project.img}>
+          <UnorderedList>
+            {project.projectList.map(petProjectName => (
+              <ListItem>{petProjectName}</ListItem>
+            ))}
+          </UnorderedList>
+        </Project>
+      </WrapItem>
+    ))}
+  </Category>
+)
+
+const Category = ({ title, children }) => (
+  <Box>
+    <Heading fontSize="md" color="gray.400" mb={4}>
+      {title}
+    </Heading>
+    <Wrap spacing={4}>{children}</Wrap>
+  </Box>
+)
+
+const Project = ({ img, title, children }) => (
+  <Box w="250px">
+    <Image src={img} alt={title} w="100%" h="150px" borderRadius="md" />
+    <Heading fontSize="lg" my={2}>
+      {title}
+    </Heading>
+    {children}
   </Box>
 )
 

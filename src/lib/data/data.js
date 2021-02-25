@@ -1,6 +1,9 @@
 import { neuralHack, revolutionUc } from "./texts"
 import neuralhackImage from "../media/neuralhack.jpg"
 import revolutionUCImage from "../media/revolutionuc.jpg"
+import visionImg from "../media/projects/computer_vision.png"
+import nlpImg from "../media/projects/nlp.png"
+import rlImg from "../media/projects/rlImg.jpg"
 
 export const urls = {
   profile: {
@@ -185,5 +188,40 @@ export const hackathonsList = [
     result: "Won 3rd",
     img: neuralhackImage,
     desc: neuralHack,
+  },
+]
+
+export const deepLearningProjects = [
+  {
+    title: "Computer Vision",
+    img: visionImg,
+    projectList: [
+      "Object Detection",
+      "Dense Captioning",
+      "Colorization",
+      "GANs",
+      "Classification",
+    ],
+  },
+  {
+    title: "Natural Language Processing",
+    img: nlpImg,
+    projectList: [
+      "Next Character",
+      "Next Word",
+      "Movie Genre",
+      "Virtual Assistant",
+    ],
+  },
+  {
+    title: "Reinforcement Learning",
+    img: rlImg,
+    projectList: [
+      "Policy Gradient",
+      "Deep Q Learning",
+      "ActorCritic",
+      "AlphaZero",
+      "MuZero",
+    ],
   },
 ]
