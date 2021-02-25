@@ -1,6 +1,13 @@
 import React from "react"
 import { BsCode, FaAndroid } from "react-icons/all"
-import { deepLearningProjects, projects, urls } from "../data/data"
+import {
+  deepLearningProjects,
+  gameProjects,
+  mobileProjects,
+  projects,
+  urls,
+  webProjects,
+} from "../data/data"
 import mlgImg from "../media/projects/mlgImg.png"
 import {
   Box,
@@ -10,6 +17,7 @@ import {
   UnorderedList,
   Wrap,
   WrapItem,
+  Text,
 } from "@chakra-ui/react"
 import { mlGalleryDescription } from "../data/texts"
 
@@ -17,8 +25,25 @@ export const Projects = () => (
   <Box>
     <Heading variant="section">Projects</Heading>
 
-    <DeepLearning />
+    <Wrap spacing={4}>
+      <DeepLearning />
+      <GenericCategory title="Mobile" projects={mobileProjects} />
+      <GenericCategory title="Web" projects={webProjects} />
+      <GenericCategory title="Games" projects={gameProjects} />
+    </Wrap>
   </Box>
+)
+
+const GenericCategory = ({ title, projects }) => (
+  <Category title={title}>
+    {projects.map(project => (
+      <WrapItem>
+        <Project title={project.title} img={project.image}>
+          <Text noOfLines={5}>{project.desc}</Text>
+        </Project>
+      </WrapItem>
+    ))}
+  </Category>
 )
 
 const DeepLearning = () => (
@@ -43,12 +68,14 @@ const DeepLearning = () => (
 )
 
 const Category = ({ title, children }) => (
-  <Box>
-    <Heading fontSize="md" color="gray.400" mb={4}>
-      {title}
-    </Heading>
-    <Wrap spacing={4}>{children}</Wrap>
-  </Box>
+  <WrapItem>
+    <Box>
+      <Heading fontSize="md" color="gray.400" mb={4}>
+        {title}
+      </Heading>
+      <Wrap spacing={4}>{children}</Wrap>
+    </Box>
+  </WrapItem>
 )
 
 const Project = ({ img, title, children }) => (

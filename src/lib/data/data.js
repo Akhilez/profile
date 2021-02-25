@@ -4,6 +4,10 @@ import revolutionUCImage from "../media/revolutionuc.jpg"
 import visionImg from "../media/projects/computer_vision.png"
 import nlpImg from "../media/projects/nlp.png"
 import rlImg from "../media/projects/rlImg.jpg"
+import studentFeedbackImg from "../media/projects/student_feedback.png"
+import syllabusImg from "../media/projects/syllabus.png"
+import medicWhizzImg from "../media/projects/medicwhizz.png"
+import alsterImg from "../media/projects/alster.png"
 
 export const urls = {
   profile: {
@@ -223,5 +227,84 @@ export const deepLearningProjects = [
       "AlphaZero",
       "MuZero",
     ],
+  },
+]
+
+export const mobileProjects = [
+  {
+    title: "Syllabus",
+    desc:
+      "An android app that provides Engineering syllabus. Aimed for students to manage and keep track of their studies. This became quite popular at my college.",
+    image: syllabusImg,
+    tags: [
+      "android",
+      "web",
+      "kotlin",
+      "java",
+      "django",
+      "mysql",
+      "cloud-firestore",
+    ],
+    date: "2016",
+    on_profile: true,
+    status: "deployed",
+    links: {
+      app:
+        "https://play.google.com/store/apps/details?id=com.homemade.akhilez.syllabus",
+      code: "https://github.com/Akhilez/Syllabus",
+      android:
+        "https://play.google.com/store/apps/details?id=com.homemade.akhilez.syllabus",
+    },
+  },
+  {
+    title: "MedicWhizz",
+    desc:
+      "An educational service for medical students (Plab). Provides practice quizzes for medical students in the form of a beautiful mobile app. Students can visualize their learning progress.",
+    image: medicWhizzImg,
+    tags: ["android", "ios", "flutter", "firebase", "cloud-firestore"],
+    date: "2019",
+    on_profile: true,
+    status: "deployed",
+    links: {
+      app:
+        "https://play.google.com/store/apps/details?id=com.akhilez.plabmaster&amp;hl=en",
+      code: "https://github.com/Akhilez/medicwhizz-api",
+      android:
+        "https://play.google.com/store/apps/details?id=com.akhilez.plabmaster&amp;hl=en",
+    },
+  },
+]
+
+export const webProjects = [
+  {
+    title: "Student Feedback",
+    desc:
+      "A comprehensive web application for universities to conduct faculty (and other) rating feedback sessions based on various teaching aspects. It collects the feedback data from students and generates beautiful analytical reports on faculty. This project is used by KMIT with thousands of students to assess their faculty members.",
+    image: studentFeedbackImg,
+    tags: ["django", "python", "web", "mysql"],
+    date: "2017",
+    on_profile: true,
+    status: "developed",
+    links: {
+      app: "https://github.com/Akhilez/StudentFeedback",
+      code: "https://github.com/Akhilez/StudentFeedback",
+    },
+  },
+]
+
+export const gameProjects = [
+  {
+    title: "Alster AR",
+    desc:
+      "A fun AR wrestling game. The game finds a surface on the table and drops the players (balls) on top of it. Your goal is to control the red ball and push the AI-controlled ball out of the table. Whomever falls off the table more number of times in 1 minute loses.",
+    image: alsterImg,
+    tags: ["unity", "augmented-reality", "c#", "android", "ios"],
+    date: "2020",
+    on_profile: true,
+    status: "developed",
+    links: {
+      app: "https://devpost.com/software/alster",
+      code: "https://github.com/Akhilez/Alster",
+    },
   },
 ]
