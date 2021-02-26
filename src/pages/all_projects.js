@@ -1,7 +1,7 @@
 import React from "react"
 import { theme } from "../theme"
 import { ChakraProvider, Container } from "@chakra-ui/react"
-import { ProjectBox } from "../lib/sections/Projects"
+import { Project } from "../lib/sections/Projects"
 import { projects } from "../lib/data/data"
 
 export default class AllProjectsPage extends React.Component {
@@ -25,7 +25,7 @@ export default class AllProjectsPage extends React.Component {
     return (
       <div>
         {deployed_projects.map(project => (
-          <ProjectBox data={project} key={project.title} />
+          <Project {...project} key={project.title} />
         ))}
       </div>
     )

@@ -1,12 +1,11 @@
 import React from "react"
 import Resume from "../lib/resume"
-import { theme } from "../theme"
-import { ChakraProvider } from "@chakra-ui/react"
+import { GlobalWrapper } from "../lib/common"
 
 export default function () {
   return (
-    <ChakraProvider theme={theme}>
+    <GlobalWrapper>
       <Resume />
-    </ChakraProvider>
+    </GlobalWrapper>
   )
 }

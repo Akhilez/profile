@@ -83,7 +83,7 @@ const Category = ({ title, children }) => (
   </WrapItem>
 )
 
-const Project = ({ image, title, links, tags, date, children }) => (
+export const Project = ({ image, title, links, tags, date, children }) => (
   <Box w="250px">
     <Link href={links?.app}>
       <Image src={image} alt={title} w="100%" h="150px" borderRadius="md" />
