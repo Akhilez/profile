@@ -58,6 +58,8 @@ export const codingActivity = `
 
 I absolutely ❤ coding! Each box below represents the amount of coding on that day of the year. Darker box = lot of code
 
+From GitHub [@Akhilez](https://github.com/Akhilez)
+
 `
 
 export const revolutionUc = `
