@@ -11,18 +11,12 @@ const TimelineBox = ({
     <Text w="50px" mt={2} color="gray.400" {...props}>
       {year}
     </Text>
-    <Flex
-      borderLeftColor="gray.100"
-      backgroundColor="gray.750"
-      borderLeftWidth={2}
-      w="100%"
-      {...props}
-    >
+    <Flex borderLeftColor="gray.100" borderLeftWidth={2} w="100%" {...props}>
       <Box
         w="10px"
         h="10px"
         backgroundColor="gray.100"
-        ml="-5px"
+        ml="-6px"
         mt="15px"
         borderRadius="5px"
       />
