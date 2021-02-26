@@ -6,9 +6,9 @@ import {
   mobileProjects,
   webProjects,
 } from "../data/data"
-import mlgImg from "../media/projects/mlgImg.png"
 import {
   Box,
+  Button,
   Heading,
   Image,
   ListItem,
@@ -20,7 +20,6 @@ import {
   Tag,
   HStack,
 } from "@chakra-ui/react"
-import { mlGalleryDescription } from "../data/texts"
 
 export const Projects = () => (
   <Box>
@@ -32,6 +31,16 @@ export const Projects = () => (
       <GenericCategory title="Web" projects={webProjects} />
       <GenericCategory title="Games" projects={gameProjects} />
     </Wrap>
+
+    <Button
+      as={Link}
+      href="https://akhilez.com/home/all_projects"
+      size="sm"
+      mt={4}
+      variant="outline"
+    >
+      More projects
+    </Button>
   </Box>
 )
 
