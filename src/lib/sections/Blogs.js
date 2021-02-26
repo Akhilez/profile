@@ -18,17 +18,15 @@ export const Blogs = () => {
   const url =
     "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@akhilez"
 
-  const { isLoading, error, data } = useQuery("mediumData", () =>
-    fetch(url).then(res => res.json(), { cacheTime: 1000 * 60 * 5 })
+  const { isLoading, data } = useQuery("mediumData", () =>
+    fetch(url).then(res => res.json(), { cacheTime: 1000 * 60 * 60 * 24 })
   )
-
-  // TODO: Limit the # of articles to 5 or so and add links etc.
 
   return (
     <Box>
       <Heading variant="section">Blogs</Heading>
       <Flex as={Link} href={urls.medium.url}>
-        <Text>I write articles in Medium</Text>
+        <Text>I write articles on Medium</Text>
         <Image src={mediumLogo} alt="Medium" height="24px" />
       </Flex>
       {isLoading && <Progress size="xs" isIndeterminate />}
@@ -54,11 +52,11 @@ const BlogItem = ({
     p={4}
     borderRadius="md"
   >
-    <Flex justify="space-between" align="center">
+    <Flex justify="space-between" align="start">
       <Heading fontSize="xl" mb={2}>
         <Link href={link}>{title}</Link>
       </Heading>
-      <Text fontSize="sm" fontWeight="bold" color="gray.400">
+      <Text fontSize="sm" color="gray.400">
         {pubDate}
       </Text>
     </Flex>
