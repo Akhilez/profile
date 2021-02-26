@@ -69,7 +69,7 @@ export const ProfileBadge = () => (
           <SocialIcon
             icon={<Image src={mediumLogo} alt="medium" height="24px" />}
             color="black"
-            url="https://akhilez.medium.com/"
+            url={urls.medium.url}
           />
         </HStack>
       </WrapItem>

@@ -26,6 +26,10 @@ export const urls = {
     url: "/all_projects",
     title: "Projects | Akhilez",
   },
+  medium: {
+    url: "https://akhilez.medium.com/",
+    title: "Medium",
+  },
 }
 
 export const projects = {
