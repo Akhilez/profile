@@ -188,7 +188,7 @@ export const hackathonsList = [
   {
     title: "RevolutionUC",
     date: "22nd February, 2020",
-    result: "Top 5",
+    result: "Top 5 for Alster AR",
     img: revolutionUCImage,
     desc: revolutionUc,
   },

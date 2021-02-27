@@ -5,10 +5,9 @@ import kmit_logo from "../media/timeline/kmit.jpg"
 
 export const bio = `
 
-I am a Deep Learning Engineer at VNDLY and 
-I majored in Artificial Intelligence in my Masters.
+I am a Deep Learning Engineer, majored in Artificial Intelligence.
 In my free time, I develop **[ml.gallery](https://ml.gallery)**.
-Also, I won the largest hackathon at my university.
+Also, I was in the top 5 at the largest hackathon at my university.
 
 I am obsessed with _Deep Learning_ 🧠, Productivity 👨🏻‍💻 and Space Exploration 🪐 
 
@@ -16,7 +15,7 @@ I am obsessed with _Deep Learning_ 🧠, Productivity 👨🏻‍💻 and Space 
 
 export const timeline = {
   vndly: {
-    role: "Deep Learning Engineer",
+    role: "Software Developer",
     org: "VNDLY",
     year: 2020,
     img: vndly_logo,
@@ -63,8 +62,8 @@ From GitHub [@Akhilez](https://github.com/Akhilez)
 `
 
 export const revolutionUc = `
-RevolutionUC is a hackathon conducted by ACM at University of Cincinnati with roughly 400 participants.\n
-Won for Alster AR
+RevolutionUC is a hackathon conducted by 
+ACM at University of Cincinnati with roughly 400 participants.
 `
 
 export const neuralHack = `NeuralHack is an India-wide hackathon with approximately 13,000 participants conducted by Virtusa`

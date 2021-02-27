@@ -58,15 +58,15 @@ export const ProfileNavBar = () => {
             <Link color="gray.300" href={urls.ml_gallery.url} {...linkProps}>
               ML Gallery
             </Link>
-            <Link
-              as={GLink}
-              color="gray.300"
-              href={urls.all_projects.url}
-              to={urls.all_projects.url}
-              {...linkProps}
-            >
-              Projects
-            </Link>
+            {/*<Link*/}
+            {/*  as={GLink}*/}
+            {/*  color="gray.300"*/}
+            {/*  href={urls.all_projects.url}*/}
+            {/*  to={urls.all_projects.url}*/}
+            {/*  {...linkProps}*/}
+            {/*>*/}
+            {/*  Projects*/}
+            {/*</Link>*/}
           </HStack>
         </Flex>
       </Container>
