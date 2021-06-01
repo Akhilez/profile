@@ -2,6 +2,7 @@ import vndly_logo from "../media/timeline/vndly_logo.png"
 import uc_logo from "../media/timeline/uc.png"
 import aviso_logo from "../media/timeline/aviso_old.png"
 import kmit_logo from "../media/timeline/kmit.jpg"
+import bioTrillionLogo from '../media/timeline/biotrillion.png'
 
 export const bio = `
 
@@ -9,13 +10,20 @@ I am a Deep Learning Engineer, majored in Artificial Intelligence.
 In my free time, I develop **[ml.gallery](https://ml.gallery)**.
 Also, I was in the top 5 at the largest hackathon at my university.
 
-I am obsessed with _Deep Learning_ 🧠, Productivity 👨🏻‍💻 and Space Exploration 🪐 
+I am obsessed with _Neural Networks_ 🧠, Evolution 🧬 and Space Exploration 🪐 
 
 `
 
 export const timeline = {
+  bio_trillion:{
+    role: "Computer Vision Engineer",
+    org: "BioTrillion",
+    year: 2021,
+    img: bioTrillionLogo,
+    description: `R&D of pupillometry using Deep Learning techniques like Semantic Segmentation, Detection, etc.`,
+  },
   vndly: {
-    role: "Software Developer",
+    role: "Developer",
     org: "VNDLY",
     year: 2020,
     img: vndly_logo,
