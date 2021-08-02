@@ -1,10 +1,10 @@
 import React from "react"
 import { BsCode, FaAndroid } from "react-icons/all"
 import {
-  deepLearningProjects,
-  gameProjects,
-  mobileProjects,
-  webProjects,
+    deepLearningProjects,
+    gameProjects, mlgProject,
+    mobileProjects,
+    webProjects,
 } from "../data/data"
 import {
   Box,
@@ -58,6 +58,11 @@ const GenericCategory = ({ title, projects }) => (
 
 const DeepLearning = () => (
   <Category title="Deep Learning">
+      <WrapItem key={mlgProject.title}>
+        <Project {...mlgProject}>
+          <Text noOfLines={5}>{mlgProject.desc}</Text>
+        </Project>
+      </WrapItem>
     {deepLearningProjects.map(project => (
       <WrapItem key={project.title}>
         <Project {...project}>

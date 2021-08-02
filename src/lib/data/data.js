@@ -201,22 +201,18 @@ export const hackathonsList = [
   },
 ]
 
-export const deepLearningProjects = [
-  {
-    title: "ML Gallery",
-    image: mlgImg,
-    projectList: [
-      "Object Detection",
-      "Dense Captioning",
-      "Colorization",
-      "GANs",
-      "Classification",
-    ],
-    links: {
-      app: urls.ml_gallery.url,
-      code: urls.ml_gallery.code,
-    },
+export const mlgProject = {
+  title: "ML Gallery",
+  image: mlgImg,
+  desc:
+    "This is a master project of some experiments with Neural Networks. Every project here is runnable, visualized and explained clearly.",
+  links: {
+    app: urls.ml_gallery.url,
+    code: urls.ml_gallery.code,
   },
+}
+
+export const deepLearningProjects = [
   {
     title: "Computer Vision",
     image: visionImg,
