@@ -37,7 +37,8 @@ const TimelineBox = ({
 export const Timeline = () => (
   <Box my={8} w="full">
     <Heading variant="section">Timeline</Heading>
-    <TimelineBox timeline={timeline.bio_trillion} pt={4} borderTopRightRadius="lg" />
+    <TimelineBox timeline={timeline.acv} pt={4} borderTopRightRadius="lg" />
+    <TimelineBox timeline={timeline.bio_trillion} />
     <TimelineBox timeline={timeline.vndly} />
     <TimelineBox timeline={timeline.uc} />
     <TimelineBox timeline={timeline.aviso} />

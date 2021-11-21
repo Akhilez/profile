@@ -2,30 +2,38 @@ import vndly_logo from "../media/timeline/vndly_logo.png"
 import uc_logo from "../media/timeline/uc.png"
 import aviso_logo from "../media/timeline/aviso_old.png"
 import kmit_logo from "../media/timeline/kmit.jpg"
-import bioTrillionLogo from '../media/timeline/biotrillion.png'
+import bioTrillionLogo from "../media/timeline/biotrillion.png"
+import acvLogo from "../media/timeline/acv_logo_white.png"
 
 export const bio = `
 
-I am a Deep Learning Engineer, majored in Artificial Intelligence.
-In my free time, I develop **[ml.gallery](https://ml.gallery)**.
-Also, I was in the top 5 at the largest hackathon at my university.
+I am a Deep Learning Engineer with background in Software,
+Master's in Artificial Intelligence.
 
-I am obsessed with _Neural Networks_ 🧠, Evolution 🧬 and Space Exploration 🪐 
+I am obsessed with Neural Networks 🧠, Evolution 🧬 and Astrophysics 🪐 
 
 `
 
 export const timeline = {
-  bio_trillion:{
+  acv: {
+    role: "Machine Learning Engineer ||| - R&D",
+    org: "ACV Auctions",
+    year: "2021 Nov",
+    img: acvLogo,
+    description:
+      "R&D of various Deep Learning based solutions for car inspections.",
+  },
+  bio_trillion: {
     role: "Computer Vision Engineer",
     org: "BioTrillion",
-    year: 2021,
+    year: "2021 May",
     img: bioTrillionLogo,
     description: `R&D of pupillometry using Deep Learning techniques like Semantic Segmentation, Detection, etc.`,
   },
   vndly: {
     role: "Developer",
     org: "VNDLY",
-    year: 2020,
+    year: "2020 May",
     img: vndly_logo,
     description: `NLP Tasks - Semantic Text Similarity based on BERT, segments highlighter \\
 Technologies: _PyTorch, TensorFlow, Django, React_`,
@@ -33,7 +41,7 @@ Technologies: _PyTorch, TensorFlow, Django, React_`,
   uc: {
     role: "Master’s in Artificial Intelligence",
     org: "University of Cincinnati",
-    year: 2019,
+    year: "2019 Aug",
     img: uc_logo,
     description: `Specializations: _Computer Vision, NLP, Reinforcement Learning and Complex Intelligent Systems_`,
   },
